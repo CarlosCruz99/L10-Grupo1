@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "./utils/api";
 
-const Sales = () => {
+const SalesList = () => {
     const [sales, setSales] = useState([]);
 
   useEffect(() => {
@@ -14,14 +14,14 @@ const Sales = () => {
   
   return (
     <div>
-      <h2>Sales</h2>
+      <h2>Ventas</h2>
         <table>
           <thead>
             <tr>
               <th>ID</th>
-              <th>Amount</th>
-              <th>Created at</th>
-              <th>Name</th>
+              <th>Monto</th>
+              <th>Fecha de creación</th>
+              <th>Nombre</th>
             </tr>
           </thead>
           <tbody>
@@ -39,4 +39,4 @@ const Sales = () => {
   );
 };
 
-export default Sales;
+export default SalesList;

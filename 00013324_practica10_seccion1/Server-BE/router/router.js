@@ -12,6 +12,7 @@ import { updateUser } from "../controllers/updateUser.js";
 import { deleteUser } from "../controllers/deleteUser.js";
 import { customers } from "../controllers/customers.js";
 import { sales } from "../controllers/sales.js";
+import { report } from "../controllers/report.js";
 
 // creación del enrutador 
 const router = express.Router();
@@ -25,6 +26,7 @@ router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
 router.get("/customers", customers);
 router.get("/sales", sales);
+router.get("/report", report);
 
 
 export default router;

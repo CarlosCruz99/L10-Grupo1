@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "./utils/api";
 
-const Customers = () => {
+const CustomerList = () => {
     const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
@@ -19,10 +19,10 @@ const Customers = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Code</th>
+              <th>Nombre</th>
+              <th>Dirección</th>
+              <th>Teléfono</th>
+              <th>Código</th>
             </tr>
           </thead>
           <tbody>
@@ -41,4 +41,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default CustomerList;
