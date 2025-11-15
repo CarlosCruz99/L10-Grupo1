@@ -10,7 +10,8 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await API.post("/signin", { email, password });
-      localStorage.setItem("token", response.data.token);
+      const token = response.data._jwt || response.data.token;
+      localStorage.setItem("token", token);
       alert("Login successful!");
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong!");
