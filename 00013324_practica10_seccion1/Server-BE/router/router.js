@@ -10,9 +10,11 @@ import { getUsers } from "../controllers/getUsers.js";
 import {getUserById} from "../controllers/getUserById.js"
 import { updateUser } from "../controllers/updateUser.js";
 import { deleteUser } from "../controllers/deleteUser.js";
+
 import { customers } from "../controllers/customers.js";
 import { sales } from "../controllers/sales.js";
 import { report } from "../controllers/report.js";
+import { customersSearch } from "../controllers/customersSearch.js";
 
 // creación del enrutador 
 const router = express.Router();
@@ -24,9 +26,10 @@ router.get("/users", verifyToken, getUsers);
 router.get("/users/:id", verifyToken, getUserById);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
+
 router.get("/customers", customers);
 router.get("/sales", sales);
 router.get("/report", report);
-
+router.get("/customers/search", customersSearch);
 
 export default router;

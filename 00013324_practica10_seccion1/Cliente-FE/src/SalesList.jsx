@@ -11,30 +11,23 @@ const SalesList = () => {
     };
     salesList();
   }, []);
-  
   return (
     <div>
       <h2>Ventas</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Monto</th>
-              <th>Fecha de creación</th>
-              <th>Nombre</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div className="tabla cols-4">
+              <div className="titulo">ID</div>
+              <div className="titulo">Monto</div>
+              <div className="titulo">Fecha de creación</div>
+              <div className="titulo">Nombre</div>
             {sales.map((s) => (
-              <tr key={s.id}>
+              <React.Fragment key={s.id}>
                 <td>{s.id}</td>
                 <td>{s.amount}</td>
                 <td>{s.created_at}</td>
                 <td>{s.name}</td>
-              </tr>
+              </React.Fragment>
             ))}
-          </tbody>
-        </table>
+        </div>
     </div>
   );
 };

@@ -11,26 +11,20 @@ const SalesReport = () => {
     };
     reportList();
   }, []);
-  
+
   return (
     <div>
       <h2>Reporte de ventas</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Cliente</th>
-              <th>Total de Ventas</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div className="tabla cols-2">
+        <div className="titulo">Cliente</div>
+        <div className="titulo">Total de Ventas</div>
             {report.map((s) => (
-              <tr key={s.id}>
-                <td>{s.name}</td>
-                <td>{s.total_sales}</td>
-              </tr>
+              <React.Fragment key={s.id}>
+                <div>{s.name}</div>
+                <div>{s.total_sales}</div>
+              </React.Fragment>
             ))}
-          </tbody>
-        </table>
+      </div>
     </div>
   );
 };

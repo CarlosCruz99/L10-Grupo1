@@ -5,6 +5,7 @@ import Protected from "./Protected";
 import CustomerList from "./CustomersList";
 import SalesList from "./SalesList";
 import SalesReport from "./SalesReport";
+import CustomerSearch from "./CustomersSearch";
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/customers" element={<CustomerList />} />
       <Route path="/sales" element={<SalesList />} />
       <Route path="/report" element={<SalesReport />} />
+      <Route path="/customers/search" element={<CustomerSearch />} />
     </Routes>
   </Router>
 );

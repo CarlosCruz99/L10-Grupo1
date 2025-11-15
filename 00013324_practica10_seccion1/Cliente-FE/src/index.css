@@ -26,6 +26,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -78,3 +81,30 @@ table, th, td {
   border-collapse: collapse;
   padding: 10px;
 }
+
+.tabla {
+  margin: 1.5rem auto;
+  border: 1px; 
+  border-style: solid;
+  border-color: white;
+  border-collapse: collapse;
+  display: grid;
+  gap: 0;
+
+}
+
+.tabla .titulo {
+  font-weight: bold;
+}
+
+.tabla div {
+  padding: 10px 12px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.tabla.cols-5 { grid-template-columns: 1fr 1fr 2fr 1fr 1fr; }
+.tabla.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.tabla.cols-2 { grid-template-columns: 2fr 1fr; }
+
+
