@@ -67,7 +67,7 @@ button:focus-visible {
   }
 }
 
-th, td {
+table, th, td {
   border: 1px; 
   border-style: solid;
   border-color: white;
