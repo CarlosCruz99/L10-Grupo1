@@ -107,4 +107,8 @@ table, th, td {
 .tabla.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
 .tabla.cols-2 { grid-template-columns: 2fr 1fr; }
 
+input {
+  padding: 1em;
+}
+
 

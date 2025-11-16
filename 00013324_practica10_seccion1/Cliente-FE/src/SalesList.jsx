@@ -21,10 +21,10 @@ const SalesList = () => {
               <div className="titulo">Nombre</div>
             {sales.map((s) => (
               <React.Fragment key={s.id}>
-                <td>{s.id}</td>
-                <td>{s.amount}</td>
-                <td>{s.created_at}</td>
-                <td>{s.name}</td>
+                <div>{s.id}</div>
+                <div>{s.amount}</div>
+                <div>{s.created_at}</div>
+                <div>{s.name}</div>
               </React.Fragment>
             ))}
         </div>

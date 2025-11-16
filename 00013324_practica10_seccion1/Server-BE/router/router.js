@@ -15,6 +15,7 @@ import { customers } from "../controllers/customers.js";
 import { sales } from "../controllers/sales.js";
 import { report } from "../controllers/report.js";
 import { customersSearch } from "../controllers/customersSearch.js";
+import { registerSale } from "../controllers/registerSale.js";
 
 // creación del enrutador 
 const router = express.Router();
@@ -28,7 +29,7 @@ router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
 
 router.get("/customers", customers);
-router.get("/sales", sales);
+router.route("/sales").get(sales).post(registerSale);
 router.get("/report", report);
 router.get("/customers/search", customersSearch);
 
