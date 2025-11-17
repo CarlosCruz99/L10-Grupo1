@@ -6,9 +6,11 @@ import CustomerList from "./CustomersList";
 import SalesReport from "./SalesReport";
 import CustomerSearch from "./CustomersSearch";
 import Sales from "./Sales";
+import Nav from "./Nav";
 
 const App = () => (
   <Router>
+    <Nav />
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/protected" element={<Protected />} />

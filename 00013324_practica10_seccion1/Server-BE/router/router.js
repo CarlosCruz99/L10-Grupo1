@@ -28,9 +28,9 @@ router.get("/users/:id", verifyToken, getUserById);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
 
-router.get("/customers", customers);
-router.route("/sales").get(sales).post(registerSale);
-router.get("/report", report);
-router.get("/customers/search", customersSearch);
+router.get("/customers", verifyToken, customers);
+router.route("/sales",).get(verifyToken, sales).post(verifyToken, registerSale);
+router.get("/report", verifyToken, report);
+router.get("/customers/search", verifyToken, customersSearch);
 
 export default router;

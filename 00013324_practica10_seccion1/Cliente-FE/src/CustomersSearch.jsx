@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import API from "./utils/api";
 
 const CustomerSearch = () => {
-    const [customers, setCustomers] = useState([]);
-    const location = useLocation();
-    const params = new URLSearchParams(location.search)
-    const code = params.get("code")
+  const [customers, setCustomers] = useState([]);
+  const location = useLocation();
+  const params = new URLSearchParams(location.search)
+  const code = params.get("code")
 
   useEffect(() => {
     const customerList = async () => {
@@ -15,7 +15,7 @@ const CustomerSearch = () => {
     };
     customerList();
   }, []);
-  
+
   return (
     <div>
       <h2>Clientes con el código {code}</h2>
